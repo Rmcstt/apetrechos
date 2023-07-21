@@ -1,8 +1,8 @@
 import random
 
 def generate_addition():
-    num1 = random.randint(1, 500)
-    num2 = random.randint(1, 500)
+    num1 = random.randint(100, 5000)
+    num2 = random.randint(100, 5000)
     result = num1 + num2
     return f"{num1} + {num2} = _____"
 
