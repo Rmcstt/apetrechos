@@ -20,8 +20,27 @@ def generate_multiplication():
     return f"{num1} x {num2} = _____"
 
 def generate_division():
-    num1 = random.randint(1, 100)
-    num2 = random.randint(1, 10)
+    num1 = random.randint(2, 10)
+    num3 = random.randint(2, 10)
+    num2 = num1 * num3
+    num1, num2 = max(num1, num2), min(num1, num2)
+    result = num2 // num1
+    return f"{num1} ÷ {num2} = _____"
+
+def generate_division2():
+    num1 = random.randint(2, 100)
+    num2 = random.randint(2, 10)
+    num1, num2 = max(num1, num2), min(num1, num2)
+    if num1 %2 != 0:
+        num1 += 1
+    if num2 %2 != 0:
+        num2 += 1 
+    result = num1 // num2
+    return f"{num1} ÷ {num2} = _____"
+
+def generate_division3():
+    num1 = random.randint(2, 100)
+    num2 = random.randint(2, 10)
     num1, num2 = max(num1, num2), min(num1, num2)
     result = num1 // num2
     return f"{num1} ÷ {num2} = _____"
@@ -37,6 +56,10 @@ def generate_exercises(operation, num_exercises):
         generator = generate_multiplication
     elif operation == "division":
         generator = generate_division
+    elif operation == "division2":
+        generator = generate_division2
+    elif operation == "division3":
+        generator = generate_division3
     else:
         print("Tipo de operação inválido!")
         return exercises
@@ -54,3 +77,4 @@ exercises = generate_exercises(operation, num_exercises)
 
 for exercise in exercises:
     print(exercise)
+
