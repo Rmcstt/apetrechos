@@ -70,7 +70,7 @@ def generate_exercises(operation, num_exercises):
     random.shuffle(exercises)
     return exercises
 
-operation = input("Digite o tipo de operação (addition, subtraction, multiplication, division): ")
+operation = input("Digite o tipo de operação (addition, subtraction, multiplication, division, division2 or division3): ")
 num_exercises = int(input("Digite o número de exercícios a serem gerados: "))
 
 exercises = generate_exercises(operation, num_exercises)
