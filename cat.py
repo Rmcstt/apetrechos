@@ -22,7 +22,7 @@ def caveira3():
 def time_sleep():
     time.sleep(0.3)
 
-def animacao_caveira():
+def animacao():
     while True:
         # Limpa o terminal antes de imprimir a próxima caveira
         caveira()
@@ -71,6 +71,6 @@ def animacao_caveira():
 
 if __name__ == "__main__":
     try:
-        animacao_caveira()
+        animacao()
     except KeyboardInterrupt:
-        print("\nAnimação da caveira encerrada.")
+        print("\nAnimação encerrada.")
