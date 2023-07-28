@@ -7,8 +7,8 @@ def generate_addition():
     return f"{num1} + {num2} = _____"
 
 def generate_subtraction():
-    num1 = random.randint(1, 50)
-    num2 = random.randint(1, 50)
+    num1 = random.randint(10, 500)
+    num2 = random.randint(10, 500)
     num1, num2 = max(num1, num2), min(num1, num2)
     result = num1 - num2
     return f"{num1} - {num2} = _____"
