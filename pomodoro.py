@@ -20,7 +20,7 @@ def play_sound(sound_file):
         pygame.time.Clock().tick(10)
 
 def pomodoro_timer(work_time, break_time, cycles):
-    sound_file = "assets/digital-alarm-3-151917.mp3"  # Replace with the actual path to your sound file
+    sound_file = "assets/glass-bell-43738.mp3"  # Replace with the actual path to your sound file
     
     for _ in range(cycles):
         for remaining_minutes in range(work_time, -1, -1):

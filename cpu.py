@@ -2,8 +2,8 @@ import psutil
 import time
 
 def criar_velocimetro(uso_cpu):
-    tamanho_velocimetro = 10
-    velocidade_atual = int(uso_cpu * tamanho_velocimetro / 20)
+    tamanho_velocimetro = 12
+    velocidade_atual = int(uso_cpu * tamanho_velocimetro / 100)
     velocimetro = "⌨︎" * velocidade_atual + "-" * (tamanho_velocimetro - velocidade_atual)
     return f"[{velocimetro}] \n M1   {uso_cpu:.1f}%"
 

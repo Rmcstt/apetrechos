@@ -1,4 +1,5 @@
 import random
+import sys
 
 def generate_addition():
     num1 = random.randint(100, 5000)
@@ -14,8 +15,8 @@ def generate_subtraction():
     return f"{num1} - {num2} = _____"
 
 def generate_multiplication():
-    num1 = random.randint(1, 10)
-    num2 = random.randint(1, 10)
+    num1 = random.randint(2, 10)
+    num2 = random.randint(2, 10)
     result = num1 * num2
     return f"{num1} x {num2} = _____"
 
@@ -70,8 +71,8 @@ def generate_exercises(operation, num_exercises):
     random.shuffle(exercises)
     return exercises
 
-operation = input("Digite o tipo de operação (addition, subtraction, multiplication, division, division2 or division3): ")
-num_exercises = int(input("Digite o número de exercícios a serem gerados: "))
+operation = sys.argv[1]
+num_exercises = int(sys.argv[2])
 
 exercises = generate_exercises(operation, num_exercises)
 
