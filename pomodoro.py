@@ -39,22 +39,28 @@ def pomodoro_timer(work_time, break_time, cycles):
                 time.sleep(1)
 
         play_sound("assets/8d82b5_MK_vs_DCU_Finish_Him_Sound_Effect.mp3")
+        if cycle == 4:
+            sys.exit
 
-        for remaining_minutes in range(break_time, -1, -1):
-            for remaining_seconds in range(59, -1, -1):
-                clear_screen()
-                print("Pomodoro Timer\n")
-                print("")
-                print("Break Timer: " +
-                      format_time(remaining_minutes, remaining_seconds))
-                time.sleep(1)
-        if cycle == 1:
-            play_sound("assets/8d82b5_MK_vs_DCU_Round_Two_Sound_Effect.mp3")
-        elif cycle == 2:
-            play_sound(
-                "assets/8d82b5_Mortal_Kombat_3_Round_Three_Sound_Effect.mp3")
         else:
-            play_sound("assets/8d82b5_MK_vs_DCU_Final_Round_Sound_Effect.mp3")
+
+            for remaining_minutes in range(break_time, -1, -1):
+                for remaining_seconds in range(59, -1, -1):
+                    clear_screen()
+                    print("Pomodoro Timer\n")
+                    print("")
+                    print("Break Timer: " +
+                          format_time(remaining_minutes, remaining_seconds))
+                    time.sleep(1)
+            if cycle == 1:
+                play_sound(
+                    "assets/8d82b5_MK_vs_DCU_Round_Two_Sound_Effect.mp3")
+            elif cycle == 2:
+                play_sound(
+                    "assets/8d82b5_Mortal_Kombat_3_Round_Three_Sound_Effect.mp3")
+            else:
+                play_sound(
+                    "assets/8d82b5_MK_vs_DCU_Final_Round_Sound_Effect.mp3")
 
 
 if __name__ == "__main__":
